@@ -8,12 +8,17 @@ import {Card} from '../../../card';
 })
 export class CardModifyComponent implements OnInit {
 
-  constructor() { }
 
   @Input()
-  card: Card
+  card: Card;
+
+  constructor() { }
 
   ngOnInit() {
+    this.card = new Card(1, 'wtfff');
   }
 
+  save(card: Card) {
+    console.log(this.card);
+  }
 }

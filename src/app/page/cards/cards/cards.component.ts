@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Card} from '../../../card';
 import {CardService} from '../../../card.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-cards',
@@ -8,8 +9,11 @@ import {CardService} from '../../../card.service';
   styleUrls: ['./cards.component.css']
 })
 export class CardsComponent implements OnInit {
+  private router: Router;
 
-  constructor(public cardService: CardService) { }
+  constructor(public cardService: CardService, router: Router) {
+    this.router = router;
+  }
 
   ngOnInit() {
   }
@@ -18,4 +22,7 @@ export class CardsComponent implements OnInit {
     return this.cardService.getCards();
   }
 
+  newCard() {
+    this.router.navigateByUrl('/cards/new');
+  }
 }

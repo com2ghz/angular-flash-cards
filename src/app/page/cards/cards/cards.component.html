@@ -1,4 +1,9 @@
 <div>
+  <div>
+    <label>
+      <button name="New" (click)="newCard()">New</button>
+    </label>
+  </div>
   <div class="card" routerLink="/cards/{{card.id}}" *ngFor="let card of getCards()">
     {{card.description}}
   </div>

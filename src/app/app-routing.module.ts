@@ -7,6 +7,7 @@ import {CardModifyComponent} from './page/cards/cardmodify/card-modify.component
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'cards', component: CardsComponent },
+  { path: 'cards/new', component: CardModifyComponent },
   { path: 'cards/:id', component: CardModifyComponent },
 ];
 

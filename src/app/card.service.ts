@@ -6,13 +6,23 @@ import {Card} from './card';
 })
 export class CardService {
 
-  constructor() { }
+  cards: Card[] = [];
 
-  cards = [
-    new Card(1, 'Some card'),
-    new Card(2, 'Hey, another flashcard'),
-    new Card(3, 'w00t'),
-  ];
+  constructor() {
+    const cardOne = new Card();
+    cardOne.id = 1;
+    cardOne.description = 'firstCard';
+
+    const cardTwo = new Card();
+    cardTwo.id = 2;
+    cardTwo.description = 'This is the second card';
+
+    const cardThree = new Card();
+    cardThree.id = 3;
+    cardThree.description = 'Third one!';
+
+    this.cards.push(cardOne, cardTwo, cardThree);
+  }
 
   getCards(): Card[] {
     return this.cards;
