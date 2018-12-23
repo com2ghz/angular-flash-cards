@@ -1,5 +1,5 @@
 <div>
-  <div class="card" routerLink="/cards/{{card.id}}" *ngFor="let card of cards">
+  <div class="card" routerLink="/cards/{{card.id}}" *ngFor="let card of getCards()">
     {{card.description}}
   </div>
 </div>

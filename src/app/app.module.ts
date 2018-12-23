@@ -7,6 +7,7 @@ import {HomeComponent} from './home/home.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { CardsComponent } from './page/cards/cards/cards.component';
 import { CardModifyComponent } from './page/cards/cardmodify/card-modify.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { CardModifyComponent } from './page/cards/cardmodify/card-modify.compone
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

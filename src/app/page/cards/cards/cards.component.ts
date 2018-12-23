@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Card} from '../card';
+import {Card} from '../../../card';
+import {CardService} from '../../../card.service';
 
 @Component({
   selector: 'app-cards',
@@ -8,15 +9,13 @@ import {Card} from '../card';
 })
 export class CardsComponent implements OnInit {
 
-  cards = [
-    new Card(1, 'Some card'),
-    new Card(2, 'Hey, another flashcard'),
-    new Card(3, 'w00t'),
-  ];
-
-  constructor() { }
+  constructor(public cardService: CardService) { }
 
   ngOnInit() {
+  }
+
+  getCards(): Card[] {
+    return this.cardService.getCards();
   }
 
 }
