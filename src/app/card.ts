@@ -1,5 +1,4 @@
 export class Card {
-
-  id: number;
+  id: string;
   description: string;
 }

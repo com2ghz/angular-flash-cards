@@ -1,5 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Card} from '../../../card';
+import {CardService} from '../../../card.service';
+import {ActivatedRoute} from '@angular/router';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-modify',
@@ -8,17 +11,28 @@ import {Card} from '../../../card';
 })
 export class CardModifyComponent implements OnInit {
 
-
   @Input()
-  card: Card;
+  card: Card = new Card();
 
-  constructor() { }
+  isNew: boolean;
+
+  constructor(private cardService: CardService, private route: ActivatedRoute, private location: Location) { }
 
   ngOnInit() {
-    this.card = new Card(1, 'wtfff');
+    const cardId = this.route.snapshot.paramMap.get('id');
+    if (cardId) {
+      this.card = this.cardService.getCard(cardId);
+    } else {
+      this.isNew = true;
+    }
   }
 
   save(card: Card) {
-    console.log(this.card);
+    if (this.isNew) {
+      this.cardService.saveCard(card);
+    } else {
+      this.cardService.updateCard(card);
+    }
+    this.location.back();
   }
 }

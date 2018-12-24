@@ -25,4 +25,8 @@ export class CardsComponent implements OnInit {
   newCard() {
     this.router.navigateByUrl('/cards/new');
   }
+
+  deleteCard(cardId: string) {
+    this.cardService.deleteCard(cardId);
+  }
 }

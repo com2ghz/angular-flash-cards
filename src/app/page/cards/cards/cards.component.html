@@ -5,6 +5,6 @@
     </label>
   </div>
   <div class="card" routerLink="/cards/{{card.id}}" *ngFor="let card of getCards()">
-    {{card.description}}
+    <span>{{card.description}}</span><span (click)="deleteCard(card.id)">X</span>
   </div>
 </div>
