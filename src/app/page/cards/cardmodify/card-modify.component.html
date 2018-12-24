@@ -4,7 +4,10 @@
 <form>
   <div>
     <label>Description
-    <input [(ngModel)]="card.description" placeholder="Description" name="description">
+      <input [(ngModel)]="card.description" placeholder="Description" name="description">
+    </label>
+    <label>Category name
+      <input [(ngModel)]="card.categoryName" placeholder="Category name" name="categoryName">
     </label>
     <div>
       <button (click)="save(card)">Save</button>
