@@ -12,16 +12,19 @@ export class CardService {
     const cardOne = new Card();
     cardOne.id = '1';
     cardOne.description = 'firstCard';
+    cardOne.answer = 'Abswer one';
     cardOne.categoryName = 'everything';
 
     const cardTwo = new Card();
     cardTwo.id = '2';
     cardTwo.description = 'This is the second card';
+    cardTwo.answer = 'Abswer twoooo';
     cardTwo.categoryName = 'Cat 1';
 
     const cardThree = new Card();
     cardThree.id = '3';
     cardThree.description = 'Third one!';
+    cardTwo.answer = 'Answer 333333';
     cardThree.categoryName = 'Cat 2';
 
     this.cards.push(cardOne, cardTwo, cardThree);

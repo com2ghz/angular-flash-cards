@@ -4,7 +4,16 @@
       <button name="New" (click)="newCard()">New</button>
     </label>
   </div>
-  <div class="card" routerLink="/cards/{{card.id}}" *ngFor="let card of getCards()">
-    <span>{{card.description}}</span><span (click)="deleteCard(card.id)">X</span>
-  </div>
+  <table>
+    <tr>
+      <th>Description</th>
+      <th>Category name</th>
+      <th>Delete</th>
+    </tr>
+    <tr class="table" routerLink="/cards/{{card.id}}" *ngFor="let card of getCards()">
+      <td>{{card.description}}</td>
+      <td>{{card.categoryName}}</td>
+      <td><span (click)="deleteCard(card.id)">X</span></td>
+    </tr>
+  </table>
 </div>
