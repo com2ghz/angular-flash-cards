@@ -6,15 +6,15 @@
   </div>
   <table>
     <tr>
-      <th>Description</th>
       <th>Category</th>
+      <th>Description</th>
       <th>Answer</th>
       <th>Delete</th>
     </tr>
     <tr class="table" routerLink="/cards/{{card.id}}" *ngFor="let card of getCards()">
+      <td>{{card.categoryName}}</td>
       <td>{{card.description}}</td>
       <td>{{card.answer}}</td>
-      <td>{{card.categoryName}}</td>
       <td><button (click)="deleteCard(card.id)">Delete</button></td>
     </tr>
   </table>
