@@ -11,21 +11,21 @@ export class CardService {
   constructor() {
     const cardOne = new Card();
     cardOne.id = '1';
+    cardOne.categoryName = 'everything';
     cardOne.description = 'firstCard';
     cardOne.answer = 'Abswer one';
-    cardOne.categoryName = 'everything';
 
     const cardTwo = new Card();
     cardTwo.id = '2';
+    cardTwo.categoryName = 'Cat 1';
     cardTwo.description = 'This is the second card';
     cardTwo.answer = 'Abswer twoooo';
-    cardTwo.categoryName = 'Cat 1';
 
     const cardThree = new Card();
     cardThree.id = '3';
+    cardThree.categoryName = 'Cat 2';
     cardThree.description = 'Third one!';
     cardTwo.answer = 'Answer 333333';
-    cardThree.categoryName = 'Cat 2';
 
     this.cards.push(cardOne, cardTwo, cardThree);
   }
@@ -52,5 +52,10 @@ export class CardService {
   updateCard(card: Card) {
     const cardIndex = this.cards.findIndex(cardEntry => cardEntry.id === card.id);
     this.cards[cardIndex] = card;
+  }
+
+  getCategories(): string[] {
+    return this.getCards()
+      .map(card => card.categoryName);
   }
 }

@@ -8,6 +8,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { CardsComponent } from './page/cards/cards/cards.component';
 import { CardModifyComponent } from './page/cards/cardmodify/card-modify.component';
 import {FormsModule} from '@angular/forms';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {FormsModule} from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

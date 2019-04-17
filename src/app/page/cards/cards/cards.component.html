@@ -7,13 +7,15 @@
   <table>
     <tr>
       <th>Description</th>
-      <th>Category name</th>
+      <th>Category</th>
+      <th>Answer</th>
       <th>Delete</th>
     </tr>
     <tr class="table" routerLink="/cards/{{card.id}}" *ngFor="let card of getCards()">
       <td>{{card.description}}</td>
+      <td>{{card.answer}}</td>
       <td>{{card.categoryName}}</td>
-      <td><span (click)="deleteCard(card.id)">X</span></td>
+      <td><button (click)="deleteCard(card.id)">Delete</button></td>
     </tr>
   </table>
 </div>

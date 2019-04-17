@@ -4,6 +4,11 @@
 <form>
   <div>
     <div>
+      <label>Category name
+        <input name="categoryName" type="text" class="form-control" [(ngModel)]="card.categoryName" [ngbTypeahead]="searchCategory"/>
+      </label>
+    </div>
+    <div>
       <label>Description
         <textarea class="cardTextarea" [(ngModel)]="card.description" placeholder="Description" name="description"></textarea>
       </label>
@@ -11,11 +16,6 @@
     <div>
       <label>Answer
         <input class="cardTextarea" [(ngModel)]="card.answer" placeholder="Answer" name="answer">
-      </label>
-    </div>
-    <div>
-      <label>Category name
-        <textarea class="cardTextarea" [(ngModel)]="card.categoryName" placeholder="Category name" name="categoryName"></textarea>
       </label>
     </div>
     <div>
