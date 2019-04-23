@@ -9,6 +9,7 @@ import { CardsComponent } from './page/cards/cards/cards.component';
 import { CardModifyComponent } from './page/cards/cardmodify/card-modify.component';
 import {FormsModule} from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { QuizComponent } from './page/quiz/quiz.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     HomeComponent,
     NavigationComponent,
     CardsComponent,
-    CardModifyComponent
+    CardModifyComponent,
+    QuizComponent
   ],
   imports: [
     BrowserModule,
