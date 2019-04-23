@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CardService} from '../../card.service';
 
 @Component({
   selector: 'app-quiz',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuizComponent implements OnInit {
 
-  constructor() { }
+  constructor(private cardService: CardService) { }
 
   ngOnInit() {
+  }
+
+  getCategories(): string[] {
+    return this.cardService.getCategories();
   }
 
 }

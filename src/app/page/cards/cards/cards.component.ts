@@ -11,7 +11,7 @@ import {Router} from '@angular/router';
 export class CardsComponent implements OnInit {
   private router: Router;
 
-  constructor(public cardService: CardService, router: Router) {
+  constructor(private cardService: CardService, router: Router) {
     this.router = router;
   }
 

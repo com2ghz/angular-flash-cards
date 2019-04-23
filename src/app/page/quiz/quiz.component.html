@@ -1,3 +1,10 @@
-<p>
-  quiz works!
-</p>
+<div>
+  Select a category from below to start a quiz. You have to option to get the flash cards in random order.
+</div>
+<div>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let category of getCategories()" routerLink="/quiz/{{category}}">
+      {{category}}
+    </li>
+  </ul>
+</div>
