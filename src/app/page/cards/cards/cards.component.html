@@ -1,7 +1,7 @@
 <div>
   <div>
     <label>
-      <button name="New" (click)="newCard()">New</button>
+      <button name="New" class="form-control" (click)="newCard()">New</button>
     </label>
   </div>
   <table>
@@ -15,7 +15,7 @@
       <td>{{card.categoryName}}</td>
       <td>{{card.description}}</td>
       <td>{{card.answer}}</td>
-      <td><button (click)="deleteCard(card.id)">Delete</button></td>
+      <td><button class="form-control" (click)="deleteCard(card.id)">Delete</button></td>
     </tr>
   </table>
 </div>

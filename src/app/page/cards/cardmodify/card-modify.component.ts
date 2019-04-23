@@ -7,8 +7,6 @@ import {Observable} from 'rxjs';
 import {debounceTime, map} from 'rxjs/operators';
 import {distinctUntilChanged} from 'rxjs/internal/operators/distinctUntilChanged';
 
-const categories = ['Gokhan', 'Realworks', 'Awesome job!'];
-
 @Component({
   selector: 'app-modify',
   templateUrl: './card-modify.component.html',

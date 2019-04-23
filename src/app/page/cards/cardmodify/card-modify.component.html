@@ -10,16 +10,16 @@
     </div>
     <div>
       <label>Description
-        <textarea class="cardTextarea" [(ngModel)]="card.description" placeholder="Description" name="description"></textarea>
+        <textarea class="cardTextarea form-control" [(ngModel)]="card.description" placeholder="Description" name="description"></textarea>
       </label>
       </div>
     <div>
       <label>Answer
-        <input class="cardTextarea" [(ngModel)]="card.answer" placeholder="Answer" name="answer">
+        <input class="cardTextarea form-control" [(ngModel)]="card.answer" placeholder="Answer" name="answer">
       </label>
     </div>
     <div>
-      <button (click)="save(card)">Save</button>
+      <button class="form-control" (click)="save(card)">Save</button>
     </div>
   </div>
 </form>
