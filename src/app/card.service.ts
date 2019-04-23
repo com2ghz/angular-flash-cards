@@ -55,7 +55,12 @@ export class CardService {
   }
 
   getCategories(): string[] {
-    return this.getCards()
+    const categories: string[] =  this.getCards()
       .map(card => card.categoryName);
+    return Array.from(new Set(categories));
+  }
+
+  getCardsByCategory(categoryName: string): Card[] {
+    return this.getCards().filter(card => card.categoryName === categoryName);
   }
 }
