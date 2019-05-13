@@ -16,7 +16,6 @@ export class QuizComponent implements OnInit {
   constructor(private cardService: CardService, private route: ActivatedRoute) {
     this.categoryName = this.route.snapshot.paramMap.get('categoryName');
     this.cards = this.cardService.getCardsByCategory(this.categoryName);
-    console.log(this.cards);
   }
 
   ngOnInit() {
