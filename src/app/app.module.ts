@@ -11,6 +11,7 @@ import {FormsModule} from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { QuizComponent } from './page/quiz/quiz/quiz.component';
 import { QuizlistComponent } from './page/quiz/quizlist/quizlist.component';
+import { FlashcardComponent } from './page/flashcard/flashcard.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { QuizlistComponent } from './page/quiz/quizlist/quizlist.component';
     CardsComponent,
     CardModifyComponent,
     QuizComponent,
-    QuizlistComponent
+    QuizlistComponent,
+    FlashcardComponent
   ],
   imports: [
     BrowserModule,

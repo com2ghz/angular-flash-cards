@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Card} from '../../card';
 
 @Component({
   selector: 'app-flashcard',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FlashcardComponent implements OnInit {
 
+  @Input()
+  private card: Card;
+
   constructor() { }
 
   ngOnInit() {
+    console.log(this.card);
   }
 
 }

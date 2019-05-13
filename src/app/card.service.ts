@@ -10,19 +10,19 @@ export class CardService {
 
   constructor() {
     const cardOne = new Card();
-    cardOne.id = '1';
+    cardOne.id = 1;
     cardOne.categoryName = 'everything';
     cardOne.description = 'firstCard';
     cardOne.answer = 'Abswer one';
 
     const cardTwo = new Card();
-    cardTwo.id = '2';
+    cardTwo.id = 2;
     cardTwo.categoryName = 'Cat 1';
     cardTwo.description = 'This is the second card';
     cardTwo.answer = 'Abswer twoooo';
 
     const cardThree = new Card();
-    cardThree.id = '3';
+    cardThree.id = 3;
     cardThree.categoryName = 'Cat 2';
     cardThree.description = 'Third one!';
     cardTwo.answer = 'Answer 333333';
@@ -34,18 +34,18 @@ export class CardService {
     return this.cards;
   }
 
-  getCard(cardId: string) {
+  getCard(cardId: number) {
     return this.getCards().find(card => card.id === cardId);
   }
 
-  deleteCard(cardId: string) {
+  deleteCard(cardId: number) {
     const cardIndex = this.cards.findIndex(card => card.id === cardId);
     this.cards.splice(cardIndex, 1);
   }
 
   saveCard(card: Card) {
     const newCardId = this.cards.length + 1;
-    card.id = newCardId.toString();
+    card.id = newCardId;
     this.cards.push(card);
   }
 
